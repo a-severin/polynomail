@@ -15,7 +15,18 @@ namespace Polynomial {
                     Console.ReadKey();
                     return;
                 }
-                //todo
+                var outputFilePath = inputFilePath + ".out";
+                var sources = File.ReadAllLines(inputFilePath);
+                var results = new string[sources.Length];
+                for (int i = 0; i < sources.Length; i++) {
+                    try {
+                        results[i] = new PolynomialExpressionParser().Parse(sources[i]).CollectAllTerms().Serialize();
+                    } catch (Exception exc) {
+                        results[i] = exc.Message;
+                    }
+                }
+                File.WriteAllLines(outputFilePath, results);
+                return;
             }
             _loop();
         }
@@ -25,7 +36,9 @@ namespace Polynomial {
                 Console.WriteLine("Input Polynomial Expression:");
                 var input = Console.ReadLine();
 
-                //todo
+                var expression = new PolynomialExpressionParser().Parse(input);
+                Console.WriteLine(expression.CollectAllTerms().Serialize());
+                Console.WriteLine();
             }
         }
     }

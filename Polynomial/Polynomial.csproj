@@ -45,7 +45,9 @@
   <ItemGroup>
     <Compile Include="PolynomialExpression.cs" />
     <Compile Include="PolynomialMember.cs" />
-    <Compile Include="PolynomialParser.cs" />
+    <Compile Include="PolynomialMemberParser.cs" />
+    <Compile Include="PolynomialExpressionParser.cs" />
+    <Compile Include="PolynomialParseException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -27,7 +27,7 @@ namespace Polynomial.Tests {
         }
 
         [Test]
-        public void Serialize() {
+        public void SerializeTests() {
             var expression = new PolynomialExpression();
             expression.AddMember(new PolynomialMember("x", 3D, 2));
             expression.AddMember(new PolynomialMember("xy", -4.1, 3));

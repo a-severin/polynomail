@@ -38,7 +38,9 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FullTest.cs" />
     <Compile Include="PolynomialExpressionTests.cs" />
+    <Compile Include="PolynomialMemberParserTests.cs" />
     <Compile Include="PolynomialParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
